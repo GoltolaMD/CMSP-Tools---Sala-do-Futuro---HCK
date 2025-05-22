@@ -1,9 +1,7 @@
 javascript:(()=>{
   if(document.getElementById('cmsp-tools')) return;
-
   const styleTag = document.createElement('style');
   document.head.appendChild(styleTag);
-
   const THEMES = {
     dark: `
       #cmsp-tools {
@@ -39,7 +37,6 @@ javascript:(()=>{
       }
     `
   };
-
   const baseStyles = `
     #cmsp-tools {
       position: fixed; top: 20px; right: 20px; z-index: 9999;
@@ -64,17 +61,19 @@ javascript:(()=>{
       transition: background 0.2s ease;
       margin-bottom: 6px;
     }
+    #cmsp-tools .footer {
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+      opacity: 0.7;
+    }
   `;
-
   let currentTheme = 'colorful';
-
   function applyTheme(theme) {
     currentTheme = theme;
     styleTag.innerHTML = baseStyles + THEMES[theme];
   }
-
   applyTheme(currentTheme);
-
   const box = document.createElement('div');
   box.id = 'cmsp-tools';
   box.innerHTML = `
@@ -89,23 +88,16 @@ javascript:(()=>{
     </div>
     <div>
       <a href="javascript:(()=>{if(!location.pathname.includes('/students/app/'))return alert('O script só funciona dentro do Matific, faça login e tente novamente.');let t=location.pathname.split('/app/')[1].split('/')[0];fetch(\`https://www.matific.com/api/student-site-v2/game-initialization-data/?exclude_firebase_token=true&app_version=\${t}&platform=WebGLPlayer\`,{method:'GET',mode:'cors',credentials:'include'}).then(t=>t.json()).then(e=>{for(let t of e.Campaigns)for(let i of t.Episodes)e.Assignments.School.push({Id:i.EpisodeId,Slug:i.Slug,AssignmentId:i.AssignmentId,Order:i.Order});window.open(\`https://matific.cupiditys.lol/?matificData=\${btoa(JSON.stringify({a:e.Assignments,b:e.EpisodeContainerVersion,c:t,d:e.UserData.UserDataToken}))}\`)})})();">📘 Matific</a>
-
       <a href="javascript:!function(){if('livros.arvore.com.br'!==location.host)return alert('Este script só funciona no Árvore!');open('https://leiasp.cupiditys.lol/?key='+encodeURIComponent(btoa(document.cookie.split('access_token=')[1].split(';')[0])))}();">📚 Leia SP</a>
-
       <a href="javascript:fetch('https://speakify.cupiditys.lol/api/bookmark.js').then(r=>r.text()).then(eval)">🎤 SPeak</a>
-
       <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/TarefaResolver.js').then(t=>t.text()).then(eval);">📝 Tarefa SP</a>
-
       <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1745012111/saladofuturo.js').then(t=>t.text()).then(eval);">📊 Prova Paulista</a>
-
       <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1747774590/redacaov2.js').then(t=>t.text()).then(eval);">✍️ Redação</a>
-
       <a href="javascript:(()=>{if(!location.href.includes('/course/')||!location.href.includes('/task/'))return alert('Este script só funciona em uma tarefa da Alura.');fetch('https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js').then(r=>r.text()).then(code=>eval(code)).catch(e=>alert('Erro: '+e));})();">🎓 Alura-Infinity</a>
-
       <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
-
-      <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expans%C3%A3onoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
+      <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
     </div>
+    <div class="footer">Feito por <strong>GoltolaMD</strong></div>
   `;
   document.body.appendChild(box);
 })();
