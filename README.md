@@ -7,8 +7,9 @@ Aqui você encontra todos os scripts essenciais para aproveitar ao máximo os re
 🔧 Todos os scripts disponíveis aqui foram desenvolvidos por uma comunidade talentosa e dedicada — todo o crédito vai integralmente aos seus criadores. Nosso papel é apenas organizar, facilitar o acesso e valorizar o trabalho de quem contribui para transformar a educação com tecnologia.
 
 Seja muito bem-vindo(a)! 🚀
+
 ✅ Como usar:
-1. Copie todo o código acima.
+1. Copie todo o código acima (CMSP Tools.js).
 
 2. Crie um novo favorito na barra de favoritos.
 
