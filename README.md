@@ -7,3 +7,16 @@ Aqui você encontra todos os scripts essenciais para aproveitar ao máximo os re
 🔧 Todos os scripts disponíveis aqui foram desenvolvidos por uma comunidade talentosa e dedicada — todo o crédito vai integralmente aos seus criadores. Nosso papel é apenas organizar, facilitar o acesso e valorizar o trabalho de quem contribui para transformar a educação com tecnologia.
 
 Seja muito bem-vindo(a)! 🚀
+✅ Como usar:
+1. Copie todo o código acima.
+
+2. Crie um novo favorito na barra de favoritos.
+
+3. Cole no campo de URL.
+
+4. Nomeie como CMSP Tools.
+
+5. Clique no favorito → aparecerá o painel.
+
+6.Use os botões 🌑 ☀️ 🌈 para trocar de tema!
+
