@@ -17,7 +17,7 @@ Seja muito bem-vindo(a)! 🚀
 
 4. Nomeie como CMSP Tools.
 
-5. Clique no favorito → aparecerá o painel.
+5. Clique no CMSP Tools → aparecerá o painel (Dentro do sala do futuro).
 
-6.Use os botões 🌑 ☀️ 🌈 para trocar de tema!
+6. Use os botões 🌑 ☀️ 🌈 para trocar de tema!
 
