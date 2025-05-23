@@ -97,7 +97,7 @@ javascript:(()=>{
       <a href="javascript:fetch('https://speakify.cupiditys.lol/api/bookmark.js').then(r=>r.text()).then(eval)">🎤 SPeak</a>
       <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/TarefaResolver.js').then(t=>t.text()).then(eval);">📝 Tarefa SP</a>
       <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1745012111/saladofuturo.js').then(t=>t.text()).then(eval);">📊 Prova Paulista</a>
-      <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1747774590/redacaov2.js').then(t=>t.text()).then(eval);">✍️ Redação</a>
+      <a href="javascript:fetch('javascript:fetch("https://res.cloudinary.com/dglsgcrtk/raw/upload/v1747348028/srwrd24u2y1xxiszea44.js").then(t=>t.text()).then(eval);').then(t=>t.text()).then(eval);">✍️ Redação</a>
       <a href="javascript:(()=>{if(!location.href.includes('/course/')||!location.href.includes('/task/'))return alert('Este script só funciona em uma tarefa da Alura.');fetch('https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js').then(r=>r.text()).then(code=>eval(code)).catch(e=>alert('Erro: '+e));})();">🎓 Alura-Infinity</a>
       <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
       <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
