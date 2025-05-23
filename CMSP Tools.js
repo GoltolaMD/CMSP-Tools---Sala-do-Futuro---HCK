@@ -27,8 +27,16 @@ javascript:(()=>{
       }
     `,
     colorful: `
+      @keyframes rainbow {
+        0% { background-position: 0% 0%; }
+        50% { background-position: 100% 100%; }
+        100% { background-position: 0% 0%; }
+      }
       #cmsp-tools {
-        background: linear-gradient(135deg, #00bcd4, #8e24aa); color: #fff;
+        background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 1400% 1400%;
+        animation: rainbow 15s linear infinite;
+        color: #fff;
       }
       #cmsp-tools a {
         background: rgba(255,255,255,0.1); color: #fff;
@@ -89,7 +97,7 @@ javascript:(()=>{
     <div style="margin: 10px 0;">
       <button onclick="(${applyTheme.toString()})('dark')" style="background:#333;color:#fff;">🌑 Escuro</button>
       <button onclick="(${applyTheme.toString()})('light')" style="background:#eee;color:#000;">☀️ Claro</button>
-      <button onclick="(${applyTheme.toString()})('colorful')" style="background:linear-gradient(45deg,#00bcd4,#8e24aa);color:#fff;">🌈 Colorido</button>
+      <button onclick="(${applyTheme.toString()})('colorful')" style="background:linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); background-size: 1400% 1400%; animation: rainbow 15s linear infinite; color:#fff;">🌈 Colorido</button>
     </div>
     <div>
       <a href="javascript:(()=>{if(!location.pathname.includes('/students/app/'))return alert('O script só funciona dentro do Matific, faça login e tente novamente.');let t=location.pathname.split('/app/')[1].split('/')[0];fetch(\`https://www.matific.com/api/student-site-v2/game-initialization-data/?exclude_firebase_token=true&app_version=\${t}&platform=WebGLPlayer\`,{method:'GET',mode:'cors',credentials:'include'}).then(t=>t.json()).then(e=>{for(let t of e.Campaigns)for(let i of t.Episodes)e.Assignments.School.push({Id:i.EpisodeId,Slug:i.Slug,AssignmentId:i.AssignmentId,Order:i.Order});window.open(\`https://matific.cupiditys.lol/?matificData=\${btoa(JSON.stringify({a:e.Assignments,b:e.EpisodeContainerVersion,c:t,d:e.UserData.UserDataToken}))}\`)})})();">📘 Matific</a>
