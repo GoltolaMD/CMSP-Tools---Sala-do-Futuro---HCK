@@ -2,6 +2,7 @@ javascript:(()=>{
   if(document.getElementById('cmsp-tools')) return;
   const styleTag = document.createElement('style');
   document.head.appendChild(styleTag);
+
   const THEMES = {
     dark: `
       #cmsp-tools {
@@ -37,6 +38,7 @@ javascript:(()=>{
       }
     `
   };
+
   const baseStyles = `
     #cmsp-tools {
       position: fixed; top: 20px; right: 20px; z-index: 9999;
@@ -68,12 +70,15 @@ javascript:(()=>{
       opacity: 0.7;
     }
   `;
+
   let currentTheme = 'colorful';
   function applyTheme(theme) {
     currentTheme = theme;
     styleTag.innerHTML = baseStyles + THEMES[theme];
   }
+
   applyTheme(currentTheme);
+
   const box = document.createElement('div');
   box.id = 'cmsp-tools';
   box.innerHTML = `
@@ -96,8 +101,10 @@ javascript:(()=>{
       <a href="javascript:(()=>{if(!location.href.includes('/course/')||!location.href.includes('/task/'))return alert('Este script só funciona em uma tarefa da Alura.');fetch('https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js').then(r=>r.text()).then(code=>eval(code)).catch(e=>alert('Erro: '+e));})();">🎓 Alura-Infinity</a>
       <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
       <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
+      <a href="https://darkmodde.github.io/CMSP-Hacks/videos" target="_blank">📺 Tutoriais</a>
     </div>
     <div class="footer">Feito por <strong>GoltolaMD</strong></div>
   `;
+
   document.body.appendChild(box);
 })();
