@@ -5,26 +5,14 @@ javascript:(()=>{
 
   const THEMES = {
     dark: `
-      #cmsp-tools {
-        background: #1e1e1e; color: #f1f1f1;
-      }
-      #cmsp-tools a {
-        background: #2c2c2c; color: #fff;
-      }
-      #cmsp-tools a:hover {
-        background: #3d3d3d;
-      }
+      #cmsp-tools { background: #1e1e1e; color: #f1f1f1; }
+      #cmsp-tools a { background: #2c2c2c; color: #fff; }
+      #cmsp-tools a:hover { background: #3d3d3d; }
     `,
     light: `
-      #cmsp-tools {
-        background: #ffffff; color: #222;
-      }
-      #cmsp-tools a {
-        background: #f0f0f0; color: #000;
-      }
-      #cmsp-tools a:hover {
-        background: #e0e0e0;
-      }
+      #cmsp-tools { background: #ffffff; color: #222; }
+      #cmsp-tools a { background: #f0f0f0; color: #000; }
+      #cmsp-tools a:hover { background: #e0e0e0; }
     `,
     colorful: `
       #cmsp-tools {
@@ -48,7 +36,7 @@ javascript:(()=>{
     }
     #cmsp-tools h3 { margin: 0 0 10px; font-size: 18px; }
     #cmsp-tools button {
-      margin-right: 5px;
+      margin-left: 5px;
       border: none; border-radius: 6px;
       padding: 6px 10px;
       cursor: pointer;
@@ -84,26 +72,35 @@ javascript:(()=>{
   box.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <h3>📦 CMSP Tools</h3>
-      <button onclick="document.getElementById('cmsp-tools').remove()">✖</button>
+      <div>
+        <button onclick="{
+          const content = document.getElementById('cmsp-content');
+          content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }">➖</button>
+        <button onclick="document.getElementById('cmsp-tools').remove()">✖</button>
+      </div>
     </div>
-    <div style="margin: 10px 0;">
-      <button onclick="(${applyTheme.toString()})('dark')" style="background:#333;color:#fff;">🌑 Escuro</button>
-      <button onclick="(${applyTheme.toString()})('light')" style="background:#eee;color:#000;">☀️ Claro</button>
-      <button onclick="(${applyTheme.toString()})('colorful')" style="background:linear-gradient(45deg,#ffff00,#ff8c00);color:#000;">🌈 Colorido</button>
+
+    <div id="cmsp-content">
+      <div style="margin: 10px 0;">
+        <button onclick="(${applyTheme.toString()})('dark')" style="background:#333;color:#fff;">🌑 Escuro</button>
+        <button onclick="(${applyTheme.toString()})('light')" style="background:#eee;color:#000;">☀️ Claro</button>
+        <button onclick="(${applyTheme.toString()})('colorful')" style="background:linear-gradient(45deg,#ffff00,#ff8c00);color:#000;">🌈 Colorido</button>
+      </div>
+      <div>
+        <a href="javascript:(()=>{if(!location.pathname.includes('/students/app/'))return alert('O script só funciona dentro do Matific, faça login e tente novamente.');let t=location.pathname.split('/app/')[1].split('/')[0];fetch(\`https://www.matific.com/api/student-site-v2/game-initialization-data/?exclude_firebase_token=true&app_version=\${t}&platform=WebGLPlayer\`,{method:'GET',mode:'cors',credentials:'include'}).then(t=>t.json()).then(e=>{for(let t of e.Campaigns)for(let i of t.Episodes)e.Assignments.School.push({Id:i.EpisodeId,Slug:i.Slug,AssignmentId:i.AssignmentId,Order:i.Order});window.open(\`https://matific.cupiditys.lol/?matificData=\${btoa(JSON.stringify({a:e.Assignments,b:e.EpisodeContainerVersion,c:t,d:e.UserData.UserDataToken}))}\`)})})();">📘 Matific</a>
+        <a href="javascript:!function(){if('livros.arvore.com.br'!==location.host)return alert('Este script só funciona no Árvore!');open('https://leiasp.cupiditys.lol/?key='+encodeURIComponent(btoa(document.cookie.split('access_token=')[1].split(';')[0])))}();">📚 Leia SP</a>
+        <a href="javascript:fetch('https://speakify.cupiditys.lol/api/bookmark.js').then(r=>r.text()).then(eval)">🎤 SPeak</a>
+        <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/TarefaResolver.js').then(t=>t.text()).then(eval);">📝 Tarefa SP</a>
+        <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1745012111/saladofuturo.js').then(t=>t.text()).then(eval);">📊 Prova Paulista</a>
+        <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1747348028/srwrd24u2y1xxiszea44.js').then(t=>t.text()).then(eval);">✍️ Redação</a>
+        <a href="javascript:(()=>{const script=\`// ==UserScript==\\n// @name         Alura-Infinity\\n// @namespace    https://cursos.alura.com.br/\\n// @match        https://cursos.alura.com.br/course/*/task/*\\n// @icon         https://i.imgur.com/OtfkTcS.png\\n// @grant        none\\n// @require      https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js\\n// ==/UserScript==\`; navigator.clipboard.writeText(script).then(()=>alert('✅ Script copiado para a área de transferência!\\nCole em um novo script no Tampermonkey ou Violentmonkey.')).catch(()=>alert('❌ Erro ao copiar o script.'));})();">🎓 Alura-Infinity</a>
+        <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
+        <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
+        <a href="javascript:(()=>{alert('ℹ️ Não é necessário copiar o bookmarklet individual de cada script.\\nBasta apertar o botão correspondente!'); window.open('https://darkmodde.github.io/CMSP-Hacks/videos', '_blank');})();">📺 Tutoriais</a>
+      </div>
+      <div class="footer">Feito por <strong>GoltolaMD</strong></div>
     </div>
-    <div>
-      <a href="javascript:(()=>{if(!location.pathname.includes('/students/app/'))return alert('O script só funciona dentro do Matific, faça login e tente novamente.');let t=location.pathname.split('/app/')[1].split('/')[0];fetch(\`https://www.matific.com/api/student-site-v2/game-initialization-data/?exclude_firebase_token=true&app_version=\${t}&platform=WebGLPlayer\`,{method:'GET',mode:'cors',credentials:'include'}).then(t=>t.json()).then(e=>{for(let t of e.Campaigns)for(let i of t.Episodes)e.Assignments.School.push({Id:i.EpisodeId,Slug:i.Slug,AssignmentId:i.AssignmentId,Order:i.Order});window.open(\`https://matific.cupiditys.lol/?matificData=\${btoa(JSON.stringify({a:e.Assignments,b:e.EpisodeContainerVersion,c:t,d:e.UserData.UserDataToken}))}\`)})})();">📘 Matific</a>
-      <a href="javascript:!function(){if('livros.arvore.com.br'!==location.host)return alert('Este script só funciona no Árvore!');open('https://leiasp.cupiditys.lol/?key='+encodeURIComponent(btoa(document.cookie.split('access_token=')[1].split(';')[0])))}();">📚 Leia SP</a>
-      <a href="javascript:fetch('https://speakify.cupiditys.lol/api/bookmark.js').then(r=>r.text()).then(eval)">🎤 SPeak</a>
-      <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/TarefaResolver.js').then(t=>t.text()).then(eval);">📝 Tarefa SP</a>
-      <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1745012111/saladofuturo.js').then(t=>t.text()).then(eval);">📊 Prova Paulista</a>
-      <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1747348028/srwrd24u2y1xxiszea44.js').then(t=>t.text()).then(eval);">✍️ Redação</a>
-      <a href="javascript:(()=>{const script=\`// ==UserScript==\\n// @name         Alura-Infinity\\n// @namespace    https://cursos.alura.com.br/\\n// @match        https://cursos.alura.com.br/course/*/task/*\\n// @icon         https://i.imgur.com/OtfkTcS.png\\n// @grant        none\\n// @require      https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js\\n// ==/UserScript==\`; navigator.clipboard.writeText(script).then(()=>alert('✅ Script copiado para a área de transferência!\\nCole em um novo script no Tampermonkey ou Violentmonkey.')).catch(()=>alert('❌ Erro ao copiar o script.'));})();">🎓 Alura-Infinity</a>
-      <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
-      <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
-      <a href="https://darkmodde.github.io/CMSP-Hacks/videos" target="_blank">📺 Tutoriais</a>
-    </div>
-    <div class="footer">Feito por <strong>GoltolaMD</strong></div>
   `;
 
   document.body.appendChild(box);
