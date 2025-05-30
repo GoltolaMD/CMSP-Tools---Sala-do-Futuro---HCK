@@ -119,6 +119,7 @@ javascript:(()=>{
         <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
         <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
         <a href="javascript:(()=>{alert('ℹ️ Não é necessário copiar o bookmarklet individual de cada script.\\nBasta apertar o botão correspondente!'); window.open('https://darkmodde.github.io/CMSP-Hacks/videos', '_blank');})();">📺 Tutoriais</a>
+        <a href="javascript:(()=>{let code=prompt('Digite o código:');if(code==='7c'){window.open('https://acervocmsp.educacao.sp.gov.br/135154/1167428.pdf','_blank');window.open('https://acervocmsp.educacao.sp.gov.br/134823/1161288.pdf','_blank');}else{alert('Código inválido.');}})();">🔐 Códigos</a>
       </div>
       <div class="footer">Feito por <strong>GoltolaMD</strong></div>
     </div>
