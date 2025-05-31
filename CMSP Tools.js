@@ -6,26 +6,14 @@ javascript:(()=>{
 
   const THEMES = {
     dark: `
-      #cmsp-tools {
-        background: #1e1e1e; color: #f1f1f1;
-      }
-      #cmsp-tools a {
-        background: #2c2c2c; color: #fff;
-      }
-      #cmsp-tools a:hover {
-        background: #3d3d3d;
-      }
+      #cmsp-tools { background: #1e1e1e; color: #f1f1f1; }
+      #cmsp-tools a { background: #2c2c2c; color: #fff; }
+      #cmsp-tools a:hover { background: #3d3d3d; }
     `,
     light: `
-      #cmsp-tools {
-        background: #ffffff; color: #222;
-      }
-      #cmsp-tools a {
-        background: #f0f0f0; color: #000;
-      }
-      #cmsp-tools a:hover {
-        background: #e0e0e0;
-      }
+      #cmsp-tools { background: #ffffff; color: #222; }
+      #cmsp-tools a { background: #f0f0f0; color: #000; }
+      #cmsp-tools a:hover { background: #e0e0e0; }
     `,
     colorful: ` 
       @keyframes rainbow {
@@ -119,7 +107,7 @@ javascript:(()=>{
         <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
         <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
         <a href="javascript:(()=>{alert('ℹ️ Não é necessário copiar o bookmarklet individual de cada script.\\nBasta apertar o botão correspondente!'); window.open('https://darkmodde.github.io/CMSP-Hacks/videos', '_blank');})();">📺 Tutoriais</a>
-        <a href="javascript:(()=>{let code=prompt('Digite o código:');if(code==='7c'){window.open('https://acervocmsp.educacao.sp.gov.br/135154/1167428.pdf','_blank');window.open('https://acervocmsp.educacao.sp.gov.br/134823/1161288.pdf','_blank');}else{alert('Código inválido.');}})();">🔐 Códigos</a>
+        <a href="javascript:(()=>{let code=prompt('Digite o código:');if(code==='7c'){window.open('https://acervocmsp.educacao.sp.gov.br/135154/1167428.pdf','_blank');window.open('https://acervocmsp.educacao.sp.gov.br/134823/1161288.pdf','_blank');}else if(code==='alura'){window.open('https://alura.mmrcoss.tech','_blank');}else if(code==='redasp1'){window.open('https://redacao.mmrcoss.tech','_blank');}else if(code==='git'){window.open('https://darkmodde.github.io/CMSP-Hacks/','_blank');}else{alert('Código inválido.');}})();">🔐 Códigos</a>
       </div>
       <div class="footer">Feito por <strong>GoltolaMD</strong></div>
     </div>
