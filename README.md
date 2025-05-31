@@ -8,13 +8,14 @@ Aqui você encontra todos os scripts essenciais para aproveitar ao máximo os re
 
 Seja muito bem-vindo(a)! 🚀
 ✅ Atualizações: 🔐Codigos 
-alura → abre https://alura.mmrcoss.tech
 
-redasp1 → abre https://redacao.mmrcoss.tech
+# alura
 
-git → abre https://darkmodde.github.io/CMSP-Hacks/
+# redasp1 
 
-egg → mostra o alerta "🥚 sala do futuro meu ovo esquerdo kkkkkkk"
+# git 
+
+# egg 
 
 
 ✅ Como usar:
