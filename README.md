@@ -34,3 +34,10 @@ Seja muito bem-vindo(a)! 🚀
 
 6. Use os botões 🌑 ☀️ 🌈 para trocar de tema!
 
+# CMSP Tools Site
+
+🔗 **Acesse o site oficial:**  
+👉 [Clique aqui para acessar o CMSP Tools](https://cmsptoolssite.netlify.app)
+
+> Você será redirecionado para a aplicação hospedada no Netlify.
+
