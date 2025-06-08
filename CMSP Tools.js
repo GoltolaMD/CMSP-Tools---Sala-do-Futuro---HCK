@@ -6,28 +6,16 @@ javascript:(()=>{
 
   const THEMES = {
     dark: `
-      #cmsp-tools {
-        background: #1e1e1e; color: #f1f1f1;
-      }
-      #cmsp-tools a {
-        background: #2c2c2c; color: #fff;
-      }
-      #cmsp-tools a:hover {
-        background: #3d3d3d;
-      }
+      #cmsp-tools { background: #1e1e1e; color: #f1f1f1; }
+      #cmsp-tools a { background: #2c2c2c; color: #fff; }
+      #cmsp-tools a:hover { background: #3d3d3d; }
     `,
     light: `
-      #cmsp-tools {
-        background: #ffffff; color: #222;
-      }
-      #cmsp-tools a {
-        background: #f0f0f0; color: #000;
-      }
-      #cmsp-tools a:hover {
-        background: #e0e0e0;
-      }
+      #cmsp-tools { background: #ffffff; color: #222; }
+      #cmsp-tools a { background: #f0f0f0; color: #000; }
+      #cmsp-tools a:hover { background: #e0e0e0; }
     `,
-    colorful: ` 
+    colorful: `
       @keyframes rainbow {
         0% { background-position: 0% 0%; }
         50% { background-position: 100% 100%; }
@@ -78,6 +66,27 @@ javascript:(()=>{
       text-align: center;
       opacity: 0.7;
     }
+    #cmsp-donation-box {
+      position: fixed; top: 20px; left: 20px; z-index: 10000;
+      background: white; color: black;
+      border-radius: 12px; padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      max-width: 260px; font-family: 'Segoe UI', sans-serif;
+      display: none;
+    }
+    #cmsp-donation-box input {
+      width: 100%; padding: 6px; margin-bottom: 10px;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    #cmsp-donation-box button {
+      width: 100%; padding: 8px;
+      border: none; border-radius: 6px;
+      background: #4caf50; color: white;
+      cursor: pointer; font-weight: bold;
+    }
+    #cmsp-donation-box .close {
+      background: #e74c3c; margin-top: 10px;
+    }
   `;
 
   let currentTheme = 'colorful';
@@ -98,7 +107,7 @@ javascript:(()=>{
           const content = document.getElementById('cmsp-content');
           content.style.display = content.style.display === 'none' ? 'block' : 'none';
         }">➖</button>
-        <button onclick="document.getElementById('cmsp-tools').remove()">✖</button>
+        <button onclick="document.getElementById('cmsp-tools').remove();document.getElementById('cmsp-donation-box')?.remove()">✖</button>
       </div>
     </div>
 
@@ -119,19 +128,25 @@ javascript:(()=>{
         <a href="javascript:fetch('https://corsproxy.io/?url=https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/KhanResolver.js').then(t=>t.text()).then(eval);">🎯 Khan Academy</a>
         <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1745457741/expansãonoturna_nhtpyn.js').then(t=>t.text()).then(eval);">🌙 Expansão Noturno</a>
         <a href="javascript:(()=>{alert('ℹ️ Não é necessário copiar o bookmarklet individual de cada script.\\nBasta apertar o botão correspondente!'); window.open('https://darkmodde.github.io/CMSP-Hacks/videos', '_blank');})();">📺 Tutoriais</a>
-        <a href="javascript:(()=>{let code=prompt('Digite o código:');if(code==='7c'){window.open('https://acervocmsp.educacao.sp.gov.br/135154/1167428.pdf','_blank');window.open('https://acervocmsp.educacao.sp.gov.br/134823/1161288.pdf','_blank');}
-        else if(code==='alura'){window.open('https://alura.mmrcoss.tech','_blank');}
-        else if(code==='redasp1'){window.open('https://redacao.mmrcoss.tech','_blank');}
-        else if(code==='git'){window.open('https://darkmodde.github.io/CMSP-Hacks/','_blank');}
-        else if(code==='egg'){alert('sala do futuro meu ovo🥚 esquerdo kkkkkkk');}
-        else if(code==='alura1'){window.open('https://github.com/marcos10pc/Alura-Destroyer/blob/main/script.js','_blank');}
-        else if(code==='doritus'){window.open('https://doritus.mmrcoss.tech','_blank');}
-        else if(code==='cebolitos'){window.open('https://cebolitos.vercel.app','_blank');}
-        else{alert('Código inválido.');}})();">🔐 Códigos</a>
+        <a href="javascript:(()=>{let code=prompt('Digite o código:');if(code==='7c'){window.open('https://acervocmsp.educacao.sp.gov.br/135154/1167428.pdf','_blank');window.open('https://acervocmsp.educacao.sp.gov.br/134823/1161288.pdf','_blank');} else if(code==='alura'){window.open('https://alura.mmrcoss.tech','_blank');} else if(code==='redasp1'){window.open('https://redacao.mmrcoss.tech','_blank');} else if(code==='git'){window.open('https://darkmodde.github.io/CMSP-Hacks/','_blank');} else if(code==='egg'){alert('sala do futuro meu ovo🥚 esquerdo kkkkkkk');} else if(code==='alura1'){window.open('https://github.com/marcos10pc/Alura-Destroyer/blob/main/script.js','_blank');} else if(code==='doritus'){window.open('https://doritus.mmrcoss.tech','_blank');} else if(code==='cebolitos'){window.open('https://cebolitos.vercel.app','_blank');} else{alert('Código inválido.');}})();">🔐 Códigos</a>
       </div>
-      <div class="footer">Feito por <strong>GoltolaMD</strong></div>
+      <div class="footer">
+        Feito por <strong>GoltolaMD</strong>
+        <button onclick="document.getElementById('cmsp-donation-box').style.display = 'block'" style="margin-left: 8px;">💖 Doar</button>
+      </div>
     </div>
   `;
 
+  const donateBox = document.createElement('div');
+  donateBox.id = 'cmsp-donation-box';
+  donateBox.innerHTML = `
+    <strong>Doação via Pix</strong>
+    <p style="margin: 10px 0 5px;">Chave Pix:</p>
+    <input type="text" readonly value="goltola@pix.com" id="pix-key">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('pix-key').value).then(()=>alert('✅ Pix copiado!'))">📋 Copiar Pix</button>
+    <button class="close" onclick="document.getElementById('cmsp-donation-box').style.display = 'none'">✖ Fechar</button>
+  `;
+
   document.body.appendChild(box);
+  document.body.appendChild(donateBox);
 })();
