@@ -1,4 +1,4 @@
-# 👩‍💻CMSP-Tools---Sala-do-Futuro---HCK👨‍💻 (PC💻) V 5.31.8
+# 👩‍💻CMSP-Tools---Sala-do-Futuro---HCK👨‍💻 (PC💻) V 6.31.8
 Hack de Sala do futuro Bookmarklet (CMSP Tools)
 🎉 Bem-vindo ao Portal de Scripts do Sala do Futuro! 🚀
 
