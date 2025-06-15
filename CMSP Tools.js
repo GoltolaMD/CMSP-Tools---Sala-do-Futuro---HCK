@@ -114,7 +114,7 @@ javascript:(()=>{
       <button onclick="(${applyTheme.toString()})('dark')" style="background:#333;color:#fff;">🌑</button>
       <button onclick="(${applyTheme.toString()})('light')" style="background:#eee;color:#000;">☀️</button>
       <button onclick="(${applyTheme.toString()})('colorful')" style="background:linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet);background-size:1400% 1400%;animation:rainbow 15s linear infinite;color:#fff;">🌈</button>
-      <button title="Avisos" onclick="window.open('https://aviso-cmsp-tools.netlify.app','_blank')" style="background:#ff9800;color:#fff;"> 🔔 </button>
+      <button title="Avisos" onclick="window.open('https://aviso-cmsp-tools.netlify.app','_blank')" style="background:#ff9800;color:#fff;">  🔔  </button>
     </div>
     <div>
       <a href="javascript:(()=>{if(!location.pathname.includes('/students/app/'))return alert('O script só funciona dentro do Matific, faça login e tente novamente.');let t=location.pathname.split('/app/')[1].split('/')[0];fetch(\`https://www.matific.com/api/student-site-v2/game-initialization-data/?exclude_firebase_token=true&app_version=\${t}&platform=WebGLPlayer\`,{method:'GET',mode:'cors',credentials:'include'}).then(t=>t.json()).then(e=>{for(let t of e.Campaigns)for(let i of t.Episodes)e.Assignments.School.push({Id:i.EpisodeId,Slug:i.Slug,AssignmentId:i.AssignmentId,Order:i.Order});window.open(\`https://matific.cupiditys.lol/?matificData=\${btoa(JSON.stringify({a:e.Assignments,b:e.EpisodeContainerVersion,c:t,d:e.UserData.UserDataToken}))}\`)})})();">📘 Matific</a>
