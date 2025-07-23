@@ -119,8 +119,8 @@ javascript:(()=>{
     <div>
       <a href="javascript:(()=>{if(!location.pathname.includes('/students/app/'))return alert('O script só funciona dentro do Matific, faça login e tente novamente.');let t=location.pathname.split('/app/')[1].split('/')[0];fetch(\`https://www.matific.com/api/student-site-v2/game-initialization-data/?exclude_firebase_token=true&app_version=\${t}&platform=WebGLPlayer\`,{method:'GET',mode:'cors',credentials:'include'}).then(t=>t.json()).then(e=>{for(let t of e.Campaigns)for(let i of t.Episodes)e.Assignments.School.push({Id:i.EpisodeId,Slug:i.Slug,AssignmentId:i.AssignmentId,Order:i.Order});window.open(\`https://matific.cupiditys.lol/?matificData=\${btoa(JSON.stringify({a:e.Assignments,b:e.EpisodeContainerVersion,c:t,d:e.UserData.UserDataToken}))}\`)})})();">📘 Matific</a>
       <a href="javascript:!function(){if('livros.arvore.com.br'!==location.host)return alert('Este script só funciona no Árvore!');open('https://leiasp.cupiditys.lol/?key='+encodeURIComponent(btoa(document.cookie.split('access_token=')[1].split(';')[0])))}();">📚 Leia SP</a>
-      <a href="javascript:fetch('https://speakify.cupiditys.lol/api/bookmark.js').then(r=>r.text()).then(eval)">🎤 SPeak</a>
-      <a href="https://github.com/Niximkk/sala-do-futuro-answer-revealer" target="_blank">📝 Tarefa SP</a>
+      <a href="javascript:fetch(`https://res.cloudinary.com/dtp29k95n/raw/upload/v1750961477/book_dwju2r.js`).then(r => r.text()).then(r => eval(r))">🎤 SPeak</a>
+      <a href="https://crimsonstrauss.xyz/maintenance_page.php" target="_blank">📝 Tarefa SP</a>
       <a href="javascript:fetch('https://res.cloudinary.com/dctxcezsd/raw/upload/v1745012111/saladofuturo.js').then(t=>t.text()).then(eval);">📊 Prova Paulista</a>
       <a href="javascript:fetch('https://res.cloudinary.com/dglsgcrtk/raw/upload/v1747348028/srwrd24u2y1xxiszea44.js').then(t=>t.text()).then(eval);">✍️ Redação</a>
       <a href="javascript:(()=>{const script=\`// ==UserScript==\\n// @name         Alura-Infinity\\n// @namespace    https://cursos.alura.com.br/\\n// @match        https://cursos.alura.com.br/course/*/task/*\\n// @icon         https://i.imgur.com/OtfkTcS.png\\n// @grant        none\\n// @require      https://raw.githubusercontent.com/DarkModde/Dark-Scripts/refs/heads/main/AluraInfinity.js\\n// ==/UserScript==\`; navigator.clipboard.writeText(script).then(()=>alert('✅ Script copiado!')).catch(()=>alert('❌ Erro ao copiar.'));})();">🎓 Alura-Infinity</a>
@@ -131,7 +131,7 @@ javascript:(()=>{
     </div>
     <div class="footer">
       Feito por <strong>GoltolaMD</strong>
-      <button onclick="document.getElementById('cmsp-donation-box').style.display = 'block'" style="margin-left: 8px;">💖 Doar</button>
+      <button onclick="window.open('https://pixgg.com/GoltolaMD', '_blank')" style="margin-left: 8px;">💖Doar</button>
     </div>
   </div>`;
 
