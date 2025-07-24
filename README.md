@@ -42,6 +42,7 @@ Seja muito bem-vindo(a)! 🚀
 
 🔗 **Acesse o site oficial:**  
 👉 [Clique aqui para acessar o CMSP Tools](https://cmsptoolssite.netlify.app)
+👉 [Clique aqui para acessar o CMSP Tools](https://cmhub.netlify.app)
 
 > Você será redirecionado para a aplicação hospedada no Netlify.
 
